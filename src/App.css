@@ -1,0 +1,299 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    .App {
+        flex: 2 2 100%;
+        display: flex;
+        flex-flow: column wrap;
+        padding: 1vh 3vw 1vh;
+        min-width: 240px;
+        min-height: 320px;
+        width: 50vw;
+        height: calc(1.6*50vw);
+        max-width: 1344px;
+        max-height: 840px;
+    }
+    .displayCluster {
+        flex: 1 1 100%;
+        height: 8.29vh;
+    }
+    #display {
+        height: 8.29vh;
+        font-size: 8.29vw;
+    }
+    .buttonCluster {
+        height: 41.66vh;
+        flex: 1 1 100%;
+    }
+    .buttonRow {
+        width: 100%;
+        height: 7vh;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        background-color: white;
+    }
+    div[class="buttonRow"]>button {
+        height: 100%; 
+        flex: 1 1 25%;
+        font-size: 2em;
+    }
+    #divide, #equals, #decimal {
+        flex: 1 1 25%;
+    }
+    #zero {
+        flex: 1 1 50%;
+    }
+    #clear, #clearEntry {
+        flex: 1 1 37.5%;
+    }
+}
+/*
+@media screen and (max-width: 504px) {
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+    /*
+    body {
+        position: relative;
+    }
+    #root {
+        width: 80%;
+        height: 50%;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .App {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 1em;
+    }
+    .buttonCluster {
+        flex: 0 0 100%;
+        
+    }
+    .buttons {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: baseline;
+        justify-content: start;
+    }
+    div[class="buttons"]>button {
+        flex: 0 0 4em;
+    }
+    #divide, #equals, #decimal {
+        flex: 0 0 4em;
+    }
+    #zero {
+        flex: 0 0 8em;
+    }
+    #clear, #clearEntry {
+        flex: 0 0 6em;
+    }
+    */ /*
+    body {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .App {
+        flex: 0 1 100%;
+        display: flex;
+        flex-flow: column wrap;
+        padding: 1em;
+    }
+    .displayCluster {
+        flex: 0 1 100%;
+    }
+    .buttonCluster {
+        flex: 0 1 100%;
+    }
+    .buttonRow {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        /*
+        align-items: center;
+        align-content: center;
+        justify-content: flex-end;
+        */ /*
+        justify-content: center;
+        background-color: white;
+    }
+    
+    div[class="buttonRow"]>button {
+        /*
+        margin: .1em;
+        margin: auto;
+        */ /*
+        height: 25%; 
+        flex: 0 1 25%;
+    }
+    #divide, #equals, #decimal {
+        flex: 0 1 25%;
+    }
+    #zero {
+        flex: 0 1 50%;
+    }
+    #clear, #clearEntry {
+        flex: 0 1 37.5%;
+    }
+    
+}
+
+@media screen and (min-width: 504px) {
+    html, body {
+        height: 100%;
+    } 
+    body {
+        position: relative;
+    }  
+    #root {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+    .App {
+      /*
+      text-align: center;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      width: 16em;
+      height: 12em;
+      */ /*
+      text-align: center;
+      display: flex;
+      flex-flow: column wrap;
+      padding: 1em;
+    }
+    */ /*
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+      height: 40vmin;
+      pointer-events: none;
+    }
+
+    .App-header {
+      background-color: #b1c8f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(10px + 2vmin);
+      color: white;
+    }
+
+    .App-link {
+      color: #61dafb;
+    }
+
+    @keyframes App-logo-spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    #display {
+        height: 2em;
+        width: 16em;
+    }
+    */ /*
+    button {
+        width: 4em;
+        height: 2em;
+    }
+
+    #zero {
+        width: 8em;
+    }
+
+    #clear {
+        width: 6em;
+    }
+
+    #clearEntry {
+        width: 6em;
+    }
+}
+*/
+/*
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.App {
+    flex: 2 2 100%;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1vh 3vw 1vh;
+    min-width: 280px;
+    min-height: 448px;
+    width: 50vw;
+    height: calc(1.6*50vw);
+    max-width: 1344px;
+    max-height: 840px;
+}
+.displayCluster {
+    flex: 1 1 100%;
+    height: 8.29vh;
+}
+#display {
+    height: 8.29vh;
+    font-size: 8.29vw;
+}
+.buttonCluster {
+    height: 41.66vh;
+    flex: 1 1 100%;
+}
+.buttonRow {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    background-color: white;
+}
+div[class="buttonRow"]>button {
+    height: 100%; 
+    flex: 1 1 25%;
+    font-size: 2em;
+}
+#divide, #equals, #decimal {
+    flex: 1 1 25%;
+}
+#zero {
+    flex: 1 1 50%;
+}
+#clear, #clearEntry {
+    flex: 1 1 37.5%;
+}
+*/
