@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import NumberButton from './NumberButton';
 import Button from './Button';
 
-export class Keyboard extends Component {
+export class Keypad extends Component {
     constructor(props) {
         super(props);
         this.zero = React.createRef();
