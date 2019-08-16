@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class Button extends Component {
+export class NButton extends Component {
     constructor(props) {
         super(props);
     }
@@ -13,15 +13,15 @@ export class Button extends Component {
     }
 }
 
-Button.defaultProps = {
+NButton.defaultProps = {
     className: "btn waves-effect waves-light",
 };
 
-Button.propTypes = {
-    id: PropTypes.string,
+NButton.propTypes = {
+    id: PropTypes.string.isRequired,
     className: PropTypes.string,
-    value: PropTypes.number,
-    onClick: PropTypes.func,
+    value: PropTypes.number.isRequired,
+    onClick: PropTypes.func.isRequired,
 };
 
-export default Button;
+export default NButton;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Button from './Button';
+import NButton from './NButton';
 
 export class NumberButton extends Component {
     constructor(props) {
@@ -11,7 +11,7 @@ export class NumberButton extends Component {
         const { props } = this;
         return(
             <>
-                <Button id={props.id} value={props.value} onClick={props.onClick} />
+                <NButton id={props.id} value={props.value} onClick={props.onClick} />
             </>
         );
     }

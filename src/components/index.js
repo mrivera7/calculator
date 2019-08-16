@@ -1,7 +1,9 @@
-import Button from './Button';
+import NButton from './NButton';
 import NumberButton from './NumberButton';
+import Keypad from './Keypad';
 
-export { Button };
+export { NButton };
 export { NumberButton };
+export { Keypad };
 
-export default { Button, NumberButton };
+export default { NButton, NumberButton, Keypad };
