@@ -8,7 +8,9 @@ export class NButton extends Component {
     render() {
         const { props } = this;
         return(
+            <>
             <button id={props.id} className={props.className} value={props.value} onClick={props.onClick}>{ props.value }</button>
+            </>
         );
     }
 }

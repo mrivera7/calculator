@@ -11,6 +11,7 @@ export class Keypad extends Component {
     render() {
         const { props } = this;
         return(
+            <>
             <div className="buttonCluster">
                 <NButton id="seven" value={7} onClick={props.onClick} />
                 <NButton id="eight" value={8} onClick={props.onClick} />
@@ -23,9 +24,10 @@ export class Keypad extends Component {
                 <NButton id="three" value={3} onClick={props.onClick} />
                 <NButton id="zero" value={0} onClick={props.onClick} />
             </div>
+            </>
         );
     }
-}
+};
 
 Keypad.propTypes = {
     onClick: PropTypes.func.isRequired,
