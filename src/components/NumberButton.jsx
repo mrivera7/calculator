@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import NButton from './NButton';
-
 export class NumberButton extends Component {
     constructor(props) {
         super(props);
@@ -11,18 +9,27 @@ export class NumberButton extends Component {
         const { props } = this;
         return(
             <>
-                <NButton id={props.id} value={props.value} onClick={props.onClick} />
+            <button id={props.id} 
+                    className={props.className} 
+                    value={(props.sign === '-' ? Number(`${props.sign}${props.value}`) : props.value)} 
+                    onClick={props.event}>
+                { props.value }
+            </button>
             </>
         );
     }
 }
 
+NumberButton.defaultProps = {
+    className: "btn waves-effect waves-light numberButton",
+};
 
 NumberButton.propTypes = {
-    id: PropTypes.string,
+    id: PropTypes.string.isRequired,
     className: PropTypes.string,
-    value: PropTypes.number,
-    onClick: PropTypes.func,
+    sign: PropTypes.string.isRequired,
+    value: PropTypes.number.isRequired,
+    event: PropTypes.func.isRequired,
 };
 
 export default NumberButton;

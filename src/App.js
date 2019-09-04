@@ -164,29 +164,7 @@ export class App extends Component {
                     <div id="displayCluster">
                         <input id="display" type="text" readOnly value={ (input === null ? "0" : input) } />
                     </div>
-                    <Keypad onClick={this.buttonPressed} />
-                    {/*
-                    <div id="buttonCluster">
-                        <button id="clear" className="btn waves-effect waves-light" onClick={this.clear}>C</button>
-                        <button id="clearEntry" className="btn waves-effect waves-light" onClick={this.clearEntry}>CE</button>
-                        <button id="divide" className="btn waves-effect waves-light" value="/" onClick={this.buttonPressed}>/</button>
-                        <NumberButton id="seven" value={7} onClick={this.buttonPressed} />
-                        <NumberButton id="eight" value={8} onClick={this.buttonPressed} />
-                        <NumberButton id="nine" value={9} onClick={this.buttonPressed} />
-                        <button id="multiply" className="btn waves-effect waves-light" value="*" onClick={this.buttonPressed}>*</button>
-                        <NumberButton id="four" value={4} onClick={this.buttonPressed} />
-                        <NumberButton id="five" value={5} onClick={this.buttonPressed} />
-                        <NumberButton id="six" value={6} onClick={this.buttonPressed} />
-                        <button id="subtract" className="btn waves-effect waves-light" value="-" onClick={this.buttonPressed}>-</button>
-                        <NumberButton id="one" value={1} onClick={this.buttonPressed} />
-                        <NumberButton id="two" value={2} onClick={this.buttonPressed} />
-                        <NumberButton id="three" value={3} onClick={this.buttonPressed} />
-                        <button id="add" className="btn waves-effect waves-light" value="+" onClick={this.buttonPressed}>+</button>
-                        <NumberButton id="zero" value={0} onClick={this.buttonPressed} />
-                        <button id="decimal" className="btn waves-effect waves-light" value="." onClick={this.buttonPressed}>.</button>
-                        <button id="equals" className="btn waves-effect waves-light" value="=" onClick={this.evaluate}>=</button>
-                    </div>
-                    */}
+                    <Keypad input={input} event={this.buttonPressed} />
                 </div>
             </>
         );
