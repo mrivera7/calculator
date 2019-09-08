@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bulma": "^0.7.5",
     "lodash": "^4.17.15",
     "materialize-css": "^1.0.0",
     "prop-types": "^15.7.2",

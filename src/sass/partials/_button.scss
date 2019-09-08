@@ -1,0 +1,13 @@
+
+
+button {
+    @extend .button;
+    color: $white;
+    background-color: $lightBlue;
+    height: $buttonHeight;
+    width: $buttonWidth;
+    &:hover {
+        color: $white;
+        background-color: $hoverBlue;
+    }
+}

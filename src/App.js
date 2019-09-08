@@ -5,8 +5,8 @@ import * as _ from 'lodash';
 import Keypad from './components/Keypad';
 
 // import './App.css';
-import './App.sass';
-import M from 'materialize-css';
+import './sass/main.scss';
+// import M from 'materialize-css';
 
 export class App extends Component {
     constructor(props) {
@@ -152,15 +152,15 @@ export class App extends Component {
             input: input,
         });
     }
-    
+    /*
     componentDidMount() {
         M.AutoInit();
-    }
+    }*/
     render() {
         const { input } = this.state;
         return(
             <>
-                <div className="App blue-grey lighten-5 z-depth-3">
+                <div className="App">
                     <div id="displayCluster">
                         <input id="display" type="text" readOnly value={ (input === null ? "0" : input) } />
                     </div>

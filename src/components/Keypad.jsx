@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import NumberButton from './NumberButton';
-import OperatorButton from './OperatorButton';
+import Button from './Button';
 
 class Keypad extends Component {
     constructor(props) {
@@ -11,25 +10,60 @@ class Keypad extends Component {
     render() {
         const { props } = this;
         return(
-            <>
-                <div className="buttonCluster">
-                    <NumberButton id="seven" value={7} sign={props.sign} event={props.event} />
-                    <NumberButton id="eight" value={8} sign={props.sign} event={props.event} />
-                    <NumberButton id="nine" value={9} sign={props.sign} event={props.event} />
-                    <OperatorButton id="multiply" value="*" event={props.event} />
-                    <NumberButton id="four" value={4} sign={props.sign} event={props.event} />
-                    <NumberButton id="five" value={5} sign={props.sign} event={props.event} />
-                    <NumberButton id="six" value={6} sign={props.sign} event={props.event} />
-                    <OperatorButton id="subtract" value="-" event={props.event} />
-                    <NumberButton id="one" value={1} sign={props.sign} event={props.event} />
-                    <NumberButton id="two" value={2} sign={props.sign} event={props.event} />
-                    <NumberButton id="three" value={3} sign={props.sign} event={props.event} />
-                    <OperatorButton id="add" value="+" event={props.event} />
-                    <NumberButton id="zero" value={0} sign={props.sign} event={props.event} />
-                    <button id="decimal" className="btn waves-effect waves-light numberButton" value="." event={props.event}>.</button>
-                    <OperatorButton id="equal" value="=" event={props.event} />
+            <div className="Keypad">
+                <Button id="clear" value="C" event={props.event} />
+                <Button id="clearEntry" value="CE" event={props.event} />
+                <Button id="divide" value="/" event={props.event} />
+                <Button id="multiply" value="*" event={props.event} />
+                <Button id="seven" value={7} event={props.event} />
+                <Button id="eight" value={8} event={props.event} />
+                <Button id="nine" value={9} event={props.event} />
+                <Button id="subtract" value="-" event={props.event} />
+                <Button id="four" value={4} event={props.event} />
+                <Button id="five" value={5} event={props.event} />
+                <Button id="six" value={6} event={props.event} />
+                <Button id="add" value="+" event={props.event} />
+                <Button id="one" value={1} event={props.event} />
+                <Button id="two" value={2} event={props.event} />
+                <Button id="three" value={3} event={props.event} />
+                <Button id="zero" value={0} event={props.event} />
+                <Button id="decimal" value="." event={props.event} />
+                <Button id="equal" value="=" event={props.event} />
+                {/*
+                <div className="KeyRows">
+                    <div className="Row">
+                        <Button id="clear" value="C" event={props.event} />
+                        <Button id="clearElement" value="CE" event={props.event} />
+                        <Button id="divide" value="/" event={props.event} />
+                    </div>
+                    <div className="Row">
+                        <Button id="seven" value={7} event={props.event} />
+                        <Button id="eight" value={8} event={props.event} />
+                        <Button id="nine" value={9} event={props.event} />
+                    </div>
+                    <div className="Row">
+                        <Button id="four" value={4} event={props.event} />
+                        <Button id="five" value={5} event={props.event} />
+                        <Button id="six" value={6} event={props.event} />
+                    </div>
+                    <div className="Row">
+                        <Button id="one" value={1} event={props.event} />
+                        <Button id="two" value={2} event={props.event} />
+                        <Button id="three" value={3} event={props.event} />
+                    </div>
+                    <div className="Row">
+                        <Button id="zero" value={0} event={props.event} />
+                        <Button id="decimal" value="." event={props.event} />
+                    </div>
                 </div>
-            </>
+                <div className="KeyColumn">
+                    <Button id="multiply" value="*" event={props.event} />
+                    <Button id="subtract" value="-" event={props.event} />
+                    <Button id="add" value="+" event={props.event} />
+                    <Button id="equal" value="=" event={props.event} />
+                </div>
+                */}
+            </div>
         );
     }
 };

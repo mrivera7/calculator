@@ -1,0 +1,103 @@
+
+
+.App {
+    @extend .box;
+    background-color: #7e7c8f;
+    margin: auto;
+    width: 5 * $buttonWidth;
+    height: 7 * $buttonHeight;
+    box-sizing: border-box;
+    .Keypad {
+        box-sizing: border-box;
+        margin: {
+            top: 1em;
+            bottom: 1em;
+            left: 1px;
+            right: 1px;
+        };
+        display: grid;
+        grid-gap: 1px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            'c ce d m'
+            'se ei n s'
+            'f fi si a'
+            'o t th e'
+            'z z de e';
+
+        #clear {
+            grid-area: c;
+        }
+
+        #clearEntry {
+            grid-area: ce;
+        }
+
+        #divide {
+            grid-area: d;
+        }
+
+        #multiply {
+            grid-area: m;
+        }
+
+        #seven {
+            grid-area: se;
+        }
+
+        #eight {
+            grid-area: ei;
+        }
+
+        #nine {
+            grid-area: n;
+        }
+
+        #subtract {
+            grid-area: s;
+        }
+
+        #four {
+            grid-area: f;
+        }
+
+        #five {
+            grid-area: fi;
+        }
+
+        #six {
+            grid-area: si;
+        }
+
+        #add {
+            grid-area: a;
+        }
+
+        #one {
+            grid-area: o;
+        }
+
+        #two {
+            grid-area: t;
+        }            
+
+        #three {
+            grid-area: th;
+        }
+
+        #zero {
+            grid-area: z;
+            width: 2.1 * $buttonWidth;
+        }
+
+        #decimal {
+            grid-area: de;
+        }
+
+        #equal {
+            grid-area: e;
+            height: 2.010415 * $buttonHeight;
+        }
+    }
+}
