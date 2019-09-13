@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import * as _ from 'lodash';
-// import './App.css';
-import './App.sass';
-import M from 'materialize-css';
 
-class App extends Component {
+import Display from './components/Display';
+import Keypad from './components/Keypad';
+
+// import './App.css';
+import './sass/main.scss';
+// import M from 'materialize-css';
+
+export class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
             input: null,
             test: '',
             evaluated: false,
+            sign: '+',
         }
         this.buttonPressed = this.buttonPressed.bind(this);
         this.evaluate = this.evaluate.bind(this);
@@ -148,70 +153,29 @@ class App extends Component {
             input: input,
         });
     }
-    
+    /*
     componentDidMount() {
         M.AutoInit();
-    }
+    }*/
     render() {
         const { input } = this.state;
         return(
-            <div className="App blue-grey lighten-5 z-depth-3">
-                <div id="displayCluster">
-                    <input id="display" type="text" readOnly value={ (input === null ? "0" : input) } />
-                </div>
-                <div id="buttonCluster">
-                    <button id="clear" className="btn waves-effect waves-light" onClick={this.clear}>C</button>
-                    <button id="clearEntry" className="btn waves-effect waves-light" onClick={this.clearEntry}>CE</button>
-                    <button id="divide" className="btn waves-effect waves-light" value="/" onClick={this.buttonPressed}>/</button>
-                    <button id="seven" className="btn waves-effect waves-light" value="7" onClick={this.buttonPressed}>7</button>
-                    <button id="eight" className="btn waves-effect waves-light" value="8" onClick={this.buttonPressed}>8</button>
-                    <button id="nine" className="btn waves-effect waves-light" value="9" onClick={this.buttonPressed}>9</button>
-                    <button id="multiply" className="btn waves-effect waves-light" value="*" onClick={this.buttonPressed}>*</button>
-                    <button id="four" className="btn waves-effect waves-light" value="4" onClick={this.buttonPressed}>4</button>
-                    <button id="five" className="btn waves-effect waves-light" value="5" onClick={this.buttonPressed}>5</button>
-                    <button id="six" className="btn waves-effect waves-light" value="6" onClick={this.buttonPressed}>6</button>
-                    <button id="subtract" className="btn waves-effect waves-light" value="-" onClick={this.buttonPressed}>-</button>
-                    <button id="one" className="btn waves-effect waves-light" value="1" onClick={this.buttonPressed}>1</button>
-                    <button id="two" className="btn waves-effect waves-light" value="2" onClick={this.buttonPressed}>2</button>
-                    <button id="three" className="btn waves-effect waves-light" value="3" onClick={this.buttonPressed}>3</button>
-                    <button id="add" className="btn waves-effect waves-light" value="+" onClick={this.buttonPressed}>+</button>
-                    <button id="zero" className="btn waves-effect waves-light" value="0" onClick={this.buttonPressed}>0</button>
-                    <button id="decimal" className="btn waves-effect waves-light" value="." onClick={this.buttonPressed}>.</button>
-                    <button id="equals" className="btn waves-effect waves-light" value="=" onClick={this.evaluate}>=</button>
+            <>
+                <div className="App">
                     {/*
-                    <div class="buttonRow">
-                        <button id="clear" className="btn waves-effect waves-light" onClick={this.clear}>C</button>
-                        <button id="clearEntry" className="btn waves-effect waves-light" onClick={this.clearEntry}>CE</button>
-                        <button id="divide" className="btn waves-effect waves-light" value="/" onClick={this.buttonPressed}>/</button>
-                    </div>
-                    <div class="buttonRow">
-                        <button id="seven" className="btn waves-effect waves-light" value="7" onClick={this.buttonPressed}>7</button>
-                        <button id="eight" className="btn waves-effect waves-light" value="8" onClick={this.buttonPressed}>8</button>
-                        <button id="nine" className="btn waves-effect waves-light" value="9" onClick={this.buttonPressed}>9</button>
-                        <button id="multiply" className="btn waves-effect waves-light" value="*" onClick={this.buttonPressed}>*</button>
-                    </div>
-                    <div class="buttonRow">
-                        <button id="four" className="btn waves-effect waves-light" value="4" onClick={this.buttonPressed}>4</button>
-                        <button id="five" className="btn waves-effect waves-light" value="5" onClick={this.buttonPressed}>5</button>
-                        <button id="six" className="btn waves-effect waves-light" value="6" onClick={this.buttonPressed}>6</button>
-                        <button id="subtract" className="btn waves-effect waves-light" value="-" onClick={this.buttonPressed}>-</button>
-                    </div>
-                    <div class="buttonRow">
-                        <button id="one" className="btn waves-effect waves-light" value="1" onClick={this.buttonPressed}>1</button>
-                        <button id="two" className="btn waves-effect waves-light" value="2" onClick={this.buttonPressed}>2</button>
-                        <button id="three" className="btn waves-effect waves-light" value="3" onClick={this.buttonPressed}>3</button>
-                        <button id="add" className="btn waves-effect waves-light" value="+" onClick={this.buttonPressed}>+</button>
-                    </div>
-                    <div class="buttonRow">
-                        <button id="zero" className="btn waves-effect waves-light" value="0" onClick={this.buttonPressed}>0</button>
-                        <button id="decimal" className="btn waves-effect waves-light" value="." onClick={this.buttonPressed}>.</button>
-                        <button id="equals" className="btn waves-effect waves-light" value="=" onClick={this.evaluate}>=</button>
-                    </div>
-                    */}
+                    <div id="displayCluster">
+                        <input id="display" 
+                               type="text" 
+                               value={ (input === null ? "0" : input) } 
+                               readOnly 
+                        />
+                    </div>*/}
+                    <Display input={input} />
+                    <Keypad input={input} event={this.buttonPressed} />
                 </div>
-            </div>
+            </>
         );
     }
-}
+};
 
 export default App;
