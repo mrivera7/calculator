@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as _ from 'lodash';
 
-// import { NButton, NumberButton } from './components';
+import Display from './components/Display';
 import Keypad from './components/Keypad';
 
 // import './App.css';
@@ -15,6 +15,7 @@ export class App extends Component {
             input: null,
             test: '',
             evaluated: false,
+            sign: '+',
         }
         this.buttonPressed = this.buttonPressed.bind(this);
         this.evaluate = this.evaluate.bind(this);
@@ -161,9 +162,15 @@ export class App extends Component {
         return(
             <>
                 <div className="App">
+                    {/*
                     <div id="displayCluster">
-                        <input id="display" type="text" readOnly value={ (input === null ? "0" : input) } />
-                    </div>
+                        <input id="display" 
+                               type="text" 
+                               value={ (input === null ? "0" : input) } 
+                               readOnly 
+                        />
+                    </div>*/}
+                    <Display input={input} />
                     <Keypad input={input} event={this.buttonPressed} />
                 </div>
             </>

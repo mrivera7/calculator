@@ -1,12 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './index.css';
-import { App } from './App.js';
+// import { App } from './App.js';
+import { Calc } from './Calc';
 
 // import 'materialize-css/dist/css/materialize.min.css';
 // import * as serviceWorker from './serviceWorker';
 
-render(<App /> , document.querySelector('section'));
+render(<Calc /> , document.querySelector('section'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

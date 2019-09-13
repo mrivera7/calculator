@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export class Button extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         const { props } = this;
         return(
@@ -28,7 +25,7 @@ Button.propTypes = {
     id: PropTypes.string.isRequired,
     className: PropTypes.string,
     value: PropTypes.oneOfType([
-        PropTypes.oneOf(['+', '-', '*', '/', '.', 'C', 'CE']),
+        PropTypes.oneOf(['=', '+', '-', '*', '/', '.', 'C', 'CE']),
         PropTypes.number,
     ]).isRequired,
     event: PropTypes.func.isRequired,
